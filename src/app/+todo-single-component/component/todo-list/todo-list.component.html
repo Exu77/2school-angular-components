@@ -1,0 +1,18 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>📝 {{title}}</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <md-list>
+      <md-list-item *ngFor="let open of todoList">
+        <div>
+          <md-checkbox [ngModel]="open.checked" (ngModelChange)="onChecked(open)">{{open.description}}</md-checkbox>
+          <span class="modified-date"> {{open.lastModified | date}} </span>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+  <md-card-actions *ngIf="showReset">
+    <button md-button (click)=onReset()>Reset</button>
+  </md-card-actions>
+</md-card>

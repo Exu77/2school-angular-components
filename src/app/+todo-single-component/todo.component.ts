@@ -54,8 +54,9 @@ export class TodoComponent implements OnInit, OnDestroy {
         return this.filterCheckedBy(true);
     }
 
-    public onChecked(checked: boolean, item: TodoItem) {
-        item.checked = checked;
+    public onChecked(item: TodoItem) {
+       console.log('clicked', item)
+        item.checked = !item.checked;
         item.lastModified = new Date();
         this.snackBar.open('checked / unchecked item', null, { duration: 1500 });
     }

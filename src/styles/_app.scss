@@ -2,7 +2,7 @@
 @import './_material';
 
 .example-fill-remaining-space {
-  // This fills the remaining space, by using flexbox. 
+  // This fills the remaining space, by using flexbox.
   // Every toolbar row uses a flexbox row layout.
   flex: 1 1 auto;
 }
@@ -26,17 +26,17 @@ md-card.add-item {
 .card-row {
   md-card {
     margin-bottom: 15px;
-  }  
+  }
 }
 
 .flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;  
+  align-items: flex-start;
 
-  md-card {
-    width: 43%;
+  todo-list {
+      width: 43%;
   }
 }
 
